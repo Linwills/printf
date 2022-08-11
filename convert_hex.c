@@ -32,7 +32,6 @@ if	(!(num == 0 && prec == 0))
 	flags, wid, prec);
 	ret += print_neg_width(output, ret, flags, wid);
 }
-}
 	return (ret);
 }
 /**
