@@ -64,7 +64,8 @@ int	_printf(const char *format, ...)
 	int ret;
 
 if	(format == NULL)
-	return (-1);
+{	return (-1);
+}
 	output = init_buffer();
 if	(output == NULL)
 	return (-1);

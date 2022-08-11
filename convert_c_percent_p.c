@@ -67,14 +67,15 @@ unsigned char flags, int wid, int prec, unsigned char len)
 {	char *null = "(nil)";
 	unsigned long int address;
 	unsigned int ret = 0;
-	(void)len
+	(void)len;
 	address = va_arg(args, unsigned long int);
 
 if	(address == '\0')
-	return (_memcpy(output, null, 5))
+{	return (_memcpy(output, null, 5));
 	flags |= 32;
 	ret += convert_ubase(output, address, "0123456789abcdef",
 	flags, wid, prec);
 	ret += print_neg_width(output, ret, flags, wid);
+}
 	return (ret);
 }
